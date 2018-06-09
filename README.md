@@ -1,5 +1,8 @@
 # README
 
+
+Step 1 : don't let your memes be dreams
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
