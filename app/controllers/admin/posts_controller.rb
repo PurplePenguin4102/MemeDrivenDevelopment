@@ -2,6 +2,7 @@ class Admin::PostsController < Admin::BaseController
 
     def index
         @posts = Post.all
+        authorize Post
     end
 
     def new
