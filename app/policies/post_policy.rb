@@ -1,6 +1,6 @@
 class PostPolicy < ApplicationPolicy
     def index?
-      user.admin? or not record.published?
+      user.admin?
     end
 
     def show?
