@@ -1,26 +1,30 @@
-<h1>Posts</h1>
-<%= link_to("new post", [:new, :post]) %>
-<table>
-    <thead>
-        <tr>
-            <th scope="col">PostNum</th>
-            <th scope="col">Published Date</th>
-            <th scope="col">Is Published</th>
-            <th scope="col">Title</th>
-            <th scope="col">Subtitle</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @posts.each do |post| %>
-        <tr>
-            <td><%= post.id %></td>
-            <td><%= post.publish_date %></td>
-            <td><%= post.published? %></td>
-            <td><%= post.title %></td>
-            <td><%= post.subtitle %></td>
-            <td><%= link_to("edit", [:edit, post]) %> <%= link_to("KILL", post, method: :delete, data: { confirm: "Are you sure you want to remove this post?" } ) %></td>
-        </tr>
-        <% end %>
-    </tbody>
-</table>
+<div class="body-bkg">
+    <div class="container body-content index-body">
+        <h1 class="body-header">Posts</h1>
+        <%= link_to("new post", [:new, :post]) %>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">PostNum</th>
+                    <th scope="col">Published Date</th>
+                    <th scope="col">Is Published</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Subtitle</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @posts.each do |post| %>
+                <tr>
+                    <td><%= post.id %></td>
+                    <td><%= post.publish_date %></td>
+                    <td><%= post.published? %></td>
+                    <td><%= post.title %></td>
+                    <td><%= post.subtitle %></td>
+                    <td><%= link_to("edit", [:edit, post]) %> <%= link_to("KILL", post, method: :delete, data: { confirm: "Are you sure you want to remove this post?" } ) %></td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

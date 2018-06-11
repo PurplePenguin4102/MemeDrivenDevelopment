@@ -1,0 +1,16 @@
+.index-body {
+    padding-top: 50px;
+}
+
+.body-bkg {
+    height:100%; 
+    width:100%; 
+    min-height:100vh; 
+    background-attachment: fixed; 
+    background-color:#6D7993;
+    color:antiquewhite;
+}
+
+.body-header {
+    text-align: center
+}
