@@ -8,9 +8,12 @@
     min-height:100vh; 
     background-attachment: fixed; 
     background-color:#6D7993;
-    color:antiquewhite;
 }
 
 .body-header {
     text-align: center
+}
+
+.table-hover > tbody > tr:hover{
+    color:darkGray;
 }
