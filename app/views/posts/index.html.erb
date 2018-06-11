@@ -1,36 +1,34 @@
-<div class="body-bkg">
-    <div class="container body-content index-body">
-        <div class="row">
-            <div class="col-lg-4">
-            </div>
-            <div class="col-lg-8 dusty">
-                <h1 class="body-header">Posts</h1>
-                <%= link_to("new post", [:new, :post], class: "btn btn-primary") %>
-                <table class="table table-hover table-condensed">
-                    <thead>
-                        <tr>
-                            <th scope="col">PostNum</th>
-                            <th scope="col">Published Date</th>
-                            <th scope="col">Is Published</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Subtitle</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% @posts.each do |post| %>
-                        <tr>
-                            <td><%= post.id %></td>
-                            <td><%= post.publish_date %></td>
-                            <td><%= post.published? %></td>
-                            <td><%= post.title %></td>
-                            <td><%= post.subtitle %></td>
-                            <td><%= link_to("edit", [:edit, post], class: "btn btn-success") %> <%= link_to("KILL", post, method: :delete, data: { confirm: "Are you sure you want to remove this post?" }, class: "btn btn-warning") %></td>
-                        </tr>
-                        <% end %>
-                    </tbody>
-                </table>
-            </div>
+<h1 class="body-header">Welcome to the Meme Cave</h1>
+<div class="row">
+    <div class="col-sm-3 hidden-xs" style="height:100%; background-color:darkGray; height:600px;">
+        <div style="">
+            <h2> Memes Posted </h2>
+            <ul>
+                <li> Meme Post 1 </li>
+                <li> Meme Post 2 </li>
+                <li> Meme Post 3 </li>
+                <li> Meme Post 4 </li>
+                <li> Meme Post 5 </li>
+            </ul>
+
+            <h2> Top Memes </h2>
+            <ul>
+                <li> Meme Post 1 </li>
+                <li> Meme Post 2 </li>
+                <li> Meme Post 3 </li>
+                <li> Meme Post 4 </li>
+                <li> Meme Post 5 </li>
+            </ul>
+            <a href="#">See all memes </a>
+        </div>
+    </div>
+    <div class="col-sm-1 hidden-xs"></div>
+    <div class="col-sm-8 col-xs-12" style="height:100%">
+        <div class="dusty short-meme">
+        <h2>Post Title</h2>
+        <h3>Subtitle</h3>
+        <p>publication date </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi purus, molestie eu mattis quis, sodales quis magna. Vivamus tempor, velit vitae hendrerit finibus, est justo auctor magna, nec elementum sapien ex vel enim. Aliquam iaculis ligula nec ante posuere finibus. Donec aliquet ipsum sed orci consectetur, sed hendrerit orci aliquet. Etiam sed sodales ante. Aliquam erat volutpat. Mauris ornare mauris tellus, sed blandit massa sodales et. Praesent nec purus tincidunt sem iaculis vulputate. Ut a viverra erat, ut congue metus. Pellentesque pulvinar diam eros, in semper metus placerat et. Quisque a felis facilisis, tempor sem vitae, ullamcorper urna. Ut risus tortor, laoreet a eleifend nec, aliquam sit amet felis. Nunc ullamcorper nibh eu arcu rhoncus gravida. Cras blandit pellentesque tincidunt. </p>
         </div>
     </div>
 </div>

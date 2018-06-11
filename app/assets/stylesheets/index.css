@@ -21,3 +21,8 @@
 .table-hover > tbody > tr:hover{
     color:darkGray;
 }
+
+.short-meme {
+    padding:5px 15px; 
+    margin-bottom:15px;
+}
