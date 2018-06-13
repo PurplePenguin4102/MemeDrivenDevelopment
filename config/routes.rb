@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'posts#index'
+  get '/memes', to: 'posts#index'
   resources :posts
   namespace :admin do
     resources :posts
