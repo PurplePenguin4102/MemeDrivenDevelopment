@@ -31,3 +31,11 @@
     color:black;
 }
 
+.list-group-item {
+    background-color:darkslategray;
+}
+
+.list-group-item:hover {
+    cursor:pointer;
+    background-color:#707070;
+}
