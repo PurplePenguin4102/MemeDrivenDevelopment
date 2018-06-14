@@ -37,3 +37,6 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+set :systemd_unit, -> { "puma.service" }
+set :systemd_use_sudo, true
+set :systemd_roles, %w(app)
