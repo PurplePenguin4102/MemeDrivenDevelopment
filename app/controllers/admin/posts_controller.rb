@@ -1,4 +1,4 @@
-class Admin::PostsController < Memes::Admin::BaseController
+class Admin::PostsController < Admin::BaseController
 
     def index
         @posts = Post.all
