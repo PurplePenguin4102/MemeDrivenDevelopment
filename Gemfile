@@ -72,3 +72,5 @@ group :development do
   gem "capistrano-rails", "~> 1.4", require: false
   gem "capistrano-systemd"
 end
+
+gem 'redcarpet'
