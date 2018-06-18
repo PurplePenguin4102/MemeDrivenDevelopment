@@ -25,35 +25,12 @@
         </div>
     </div>
     <div class="col-sm-8 col-sm-offset-1 col-xs-12" style="height:100%">
-    <% @posts.each do |post| %>
-        <div class="dusty short-meme">
-        <h2><%= post.title %></h2>
-        <h3><%= post.subtitle %></h3>
-        <p>published : <% post.publish_date%></h2>
-        <%=  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(), extensions = {})
-        markdown.render(
-        %Q{### My List of Things To Do!
-
-  Here is the list of things I wish to do!
-
-  * write more posts
-  * write even more posts
-  * write even more posts!}).html_safe %>
-        </div>
-    <% end %>
-        <div class="dusty short-meme">
-        <h2>Title</h2>
-        <h3>Subtitle</h3>
-        <p>published : Today!</h2>
-        <%=  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(), extensions = {})
-        markdown.render(
-        %Q{### My List of Things To Do!
-
-  Here is the list of things I wish to do!
-
-  * write more posts
-  * write even more posts
-  * write even more posts!}).html_safe %>
-        </div>
+        <% @posts.each do |post| %>
+            <div class="dusty short-meme">
+            <h2><%= post.title %> - <%= post.subtitle %></h2>
+            <p>published : <%= post.publish_date%></p>
+            <%= post.content.html_safe %>
+            </div>
+        <% end %>
     </div>
 </div>
