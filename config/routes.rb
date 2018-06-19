@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     post '/signup', to: 'devise/registrations#create', as: :user_registration
   end
   root to: 'posts#index'
+  
   resources :posts
   namespace :admin do
     resources :posts
