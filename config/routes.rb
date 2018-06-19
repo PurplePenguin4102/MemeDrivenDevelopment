@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :posts
   end
-  get "/admin", to: "/admin/posts#index"
+  get "/admin", to: "admin/posts#index"
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
