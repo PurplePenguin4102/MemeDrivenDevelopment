@@ -1,3 +1,5 @@
+require 'date'
+
 class PostsController < ApplicationController
 
     def show
@@ -5,6 +7,6 @@ class PostsController < ApplicationController
     end
 
     def index
-        @posts = Post.all
+        @posts = Post.all.decorate
     end
 end

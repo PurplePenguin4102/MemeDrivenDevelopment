@@ -1,8 +1,9 @@
 
-<h1 class="body-header">Welcome to the Meme Cave</h1>
 <div class="row">
-    <div class="col-sm-3 hidden-xs" style="height:100%; background-color:darkGray; height:600px;">
+    <div class="col-sm-3 hidden-xs" style="height:100%; background-color:darkGray;">
         <div style="">
+            <h1 class="body-header">Meme Driven Development</h1>
+            <p>A blog about life, love and software</p>
             <h2> Memes Posted </h2>
             <ul class="list-group">
                 <li class="list-group-item"> Meme Post 1 </li>
@@ -24,11 +25,12 @@
         </div>
     </div>
     <div class="col-sm-8 col-sm-offset-1 col-xs-12" style="height:100%">
-        <div class="dusty short-meme">
-        <h2>Post Title</h2>
-        <h3>Subtitle</h3>
-        <p>publication date </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi purus, molestie eu mattis quis, sodales quis magna. Vivamus tempor, velit vitae hendrerit finibus, est justo auctor magna, nec elementum sapien ex vel enim. Aliquam iaculis ligula nec ante posuere finibus. Donec aliquet ipsum sed orci consectetur, sed hendrerit orci aliquet. Etiam sed sodales ante. Aliquam erat volutpat. Mauris ornare mauris tellus, sed blandit massa sodales et. Praesent nec purus tincidunt sem iaculis vulputate. Ut a viverra erat, ut congue metus. Pellentesque pulvinar diam eros, in semper metus placerat et. Quisque a felis facilisis, tempor sem vitae, ullamcorper urna. Ut risus tortor, laoreet a eleifend nec, aliquam sit amet felis. Nunc ullamcorper nibh eu arcu rhoncus gravida. Cras blandit pellentesque tincidunt. </p>
-        </div>
+        <% @posts.each do |post| %>
+            <div class="dusty short-meme">
+            <h2><%= post.title %> - <%= post.subtitle %></h2>
+            <p><%= post.publish_date.strftime('%a %b %d %y') %></p>
+            <%= post.rendered_content %>
+            </div>
+        <% end %>
     </div>
 </div>
