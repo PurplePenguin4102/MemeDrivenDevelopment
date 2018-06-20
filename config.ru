@@ -6,6 +6,6 @@ if Rails.env.production?
     map '/memes' do
       run Rails.application
     end
-  else
+else
     run Rails.application
-  end
+end

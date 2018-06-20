@@ -11,7 +11,6 @@ Rails.application.configure do
   config.eager_load = true
   config.action_controller.relative_url_root = "/memes"
 
-  config.hard_coded_subir = "/memes"
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
