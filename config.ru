@@ -3,7 +3,7 @@
 require_relative 'config/environment'
 
 if Rails.env.production?
-    map '/foo' do
+    map '/memes' do
       run Rails.application
     end
   else
