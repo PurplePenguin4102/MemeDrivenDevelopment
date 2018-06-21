@@ -33,9 +33,13 @@
 
 .list-group-item {
     background-color:darkslategray;
+    color:antiquewhite;
+    text-decoration: none;
 }
 
 .list-group-item:hover {
     cursor:pointer;
     background-color:#707070;
+    color:antiquewhite;
+    text-decoration: none;
 }

@@ -1,14 +1,12 @@
-<div class="container body-container">
-    <div class="row">
-        <div class="col-md-offset-4 col-md-8 dusty">
-            <h1 style="text-align:center;">New Post</h1>
-        </div>
+<div class="row">
+    <div class="col-md-offset-4 col-md-8 dusty">
+        <h1 style="text-align:center;">New Post</h1>
     </div>
-    <div class="row">
-        <div class="col-md-offset-4 col-md-8 dusty" style="padding-bottom:16px;">
-            <%= form_for [:admin, @post] do |f|%>
-            <%= render partial: "form", locals: { f: f } %>
-            <% end %>
-        </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-4 col-md-8 dusty" style="padding-bottom:16px;">
+        <%= form_for [:admin, @post] do |f|%>
+        <%= render partial: "form", locals: { f: f } %>
+        <% end %>
     </div>
 </div>

@@ -1,43 +1,11 @@
-
 <div class="row">
-    <div class="col-sm-3 hidden-xs" style="height:100%; background-color:darkGray;">
-        <div style="">
-            <h1 class="body-header">Meme Driven Development</h1>
-            <p>A blog about life, love and software</p>
-            <h2> Top Memes </h2>
-            <ul class="list-group">
-                <li class="list-group-item"> Meme Post 1 </li>
-                <li class="list-group-item"> Meme Post 2 </li>
-                <li class="list-group-item"> Meme Post 3 </li>
-                <li class="list-group-item"> Meme Post 4 </li>
-                <li class="list-group-item"> Meme Post 5 </li>
-            </ul>
-
-            <h2> Recent Memes </h2>
-            <ul class="list-group">
-                <li class="list-group-item"> Meme Post 1 </li>
-                <li class="list-group-item"> Meme Post 2 </li>
-                <li class="list-group-item"> Meme Post 3 </li>
-                <li class="list-group-item"> Meme Post 4 </li>
-                <li class="list-group-item"> Meme Post 5 </li>
-            </ul>
-            <h2> Random Memes </h2>
-            <ul class="list-group">
-                <li class="list-group-item"> Meme Post 1 </li>
-                <li class="list-group-item"> Meme Post 2 </li>
-                <li class="list-group-item"> Meme Post 3 </li>
-                <li class="list-group-item"> Meme Post 4 </li>
-                <li class="list-group-item"> Meme Post 5 </li>
-            </ul>
-            <a href="#">See all memes </a>
-        </div>
-    </div>
+    <%= render partial: "sideview", locals: { side_view: @side_view } %>
     <div class="col-sm-8 col-sm-offset-1 col-xs-12" style="height:100%">
         <% @posts.each do |post| %>
             <div class="dusty short-meme">
-            <h2><%= post.title %> - <%= post.subtitle %></h2>
-            <p><%= post.publish_date.strftime('%a %b %d %y') %></p>
-            <%= post.rendered_content %>
+                <h2><%= post.title %> - <%= post.subtitle %></h2>
+                <p><%= post.publish_date.strftime('%a %b %d %y') %></p>
+                <%= post.rendered_content %>
             </div>
         <% end %>
     </div>
