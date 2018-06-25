@@ -31,15 +31,27 @@
     color:black;
 }
 
-.list-group-item {
+.post-list a {
     background-color:darkslategray;
     color:antiquewhite;
     text-decoration: none;
+    box-sizing: border-box;
+    width: 261px;
+    height: 40px;
+    padding: 7px 15px;
+    border: beige;
+    border-style: outset;
+    display: inline-block;
+    border-radius: 5px;
 }
 
-.list-group-item:hover {
-    cursor:pointer;
+.post-list {
+    list-style-type: none;
+}
+
+.post-list a:hover {
     background-color:#707070;
     color:antiquewhite;
     text-decoration: none;
+    border-style: inset;
 }

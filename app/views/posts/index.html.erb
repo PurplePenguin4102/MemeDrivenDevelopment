@@ -2,11 +2,7 @@
     <%= render partial: "sideview", locals: { side_view: @side_view } %>
     <div class="col-sm-8 col-sm-offset-1 col-xs-12" style="height:100%">
         <% @posts.each do |post| %>
-            <div class="dusty short-meme">
-                <h2><%= post.title %> - <%= post.subtitle %></h2>
-                <p><%= post.publish_date.strftime('%a %b %d %y') %></p>
-                <%= post.rendered_content %>
-            </div>
+            <%= render partial: "post", locals: { p: post } %>
         <% end %>
     </div>
 </div>
