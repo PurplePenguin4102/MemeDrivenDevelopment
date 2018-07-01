@@ -1,3 +1,12 @@
+/*
+old pallette
+#6D7993
+#96858F
+darkGray
+darkslategray
+#707070
+*/
+
 .index-body {
     padding-top: 50px;
 }
@@ -7,11 +16,16 @@
     width:100%; 
     min-height:100vh; 
     background-attachment: fixed; 
-    background-color:#6D7993;
+    background-color:#394b65;
+}
+
+.side-bar {
+    background-color:#062441;
+    height:100%;
 }
 
 .dusty {
-    background-color:#96858F;
+    background-color:#011f4b;
 }
 
 .body-header {
@@ -32,7 +46,7 @@
 }
 
 .post-list a {
-    background-color:darkslategray;
+    background-color:#6497b1;
     color:antiquewhite;
     text-decoration: none;
     box-sizing: border-box;
@@ -50,7 +64,7 @@
 }
 
 .post-list a:hover {
-    background-color:#707070;
+    background-color:#005b96;
     color:antiquewhite;
     text-decoration: none;
     border-style: inset;
