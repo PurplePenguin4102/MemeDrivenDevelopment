@@ -1,5 +1,5 @@
 $(function () {
-    $('input[type="checkbox"]').change(function() { 
+    $('#post_published').change(function() { 
         if($(this).is(":checked")) { 
             var d = new Date(); 
             var month = d.getMonth() + 1;
