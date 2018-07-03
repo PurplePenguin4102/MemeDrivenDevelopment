@@ -5,11 +5,12 @@
 
         <h2> Top Memes </h2>
         <ul class="list-group">
-            <li class="post-list"> <%= link_to side_view[0].title, post_path(side_view[0].id) %> </li> 
-            <li class="post-list"> <%= link_to side_view[1].title, post_path(side_view[1].id) %> </li>
-            <li class="post-list"> <%= link_to side_view[2].title, post_path(side_view[2].id) %> </li>
-            <li class="post-list"> <%= link_to side_view[3].title, post_path(side_view[3].id) %> </li>
-            <li class="post-list"> <%= link_to side_view[0].title, post_path(side_view[0].id) %> </li>
+            <% top_posts = side_view.select do |post| 
+                 post.top_post 
+               end
+               top_posts.each do |post| %>
+               <li class="post-list"> <%= link_to post.title, post_path(post.id) %> </li> 
+            <% end %>
         </ul>
 
         <h2> Recent Memes </h2>
