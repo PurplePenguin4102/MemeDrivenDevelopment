@@ -17,3 +17,9 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function () {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });
