@@ -1,6 +1,6 @@
 <div class="row">
     <%= render partial: "sideview", locals: { side_view: @side_view } %>
-    <div class="col-sm-8 col-sm-offset-1 col-xs-12" style="height:100%">
+    <div class="col-lg-8 col-lg-offset-1 col-xs-12" style="height:100%">
         <% @posts.each do |post| %>
             <%= render partial: "post", locals: { p: post } %>
         <% end %>
