@@ -23,4 +23,16 @@ document.addEventListener("turbolinks:load", function () {
     $('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
     });
-})
+
+    $(function () {
+        $('#post_published').change(function() { 
+          if($(this).is(":checked")) { 
+            var d = new Date(); 
+            var month = d.getMonth() + 1;
+            var datestr = "" + d.getFullYear() + "-" + month + "-" + d.getDate();
+            $('#post_publish_date').val(datestr);
+          } 
+        });
+      });
+});
+
